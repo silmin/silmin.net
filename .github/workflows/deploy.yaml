@@ -3,12 +3,12 @@ name: build and deploy
 on:
   push:
     branches: [main]
-    paths:
-      - '!README.md'
+    paths-ignore:
+      - 'README.md'
   workflow_dispatch:
     branches: [main]
-    paths:
-      - '!README.md'
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   deploy:
@@ -28,10 +28,9 @@ jobs:
           bash scripts/build.sh
           bash scripts/deploy.sh
         env:
-          GCP_SA_KEY: $GCP_SA_KEY
-          GCP_IMAGE: $GCP_IMAGE
-          GCP_REGION: $GCP_REGION
-          GCP_PROJECT: $GCP_PROJECT
-          GCP_SERVICE: $GCP_SERVICE
-
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GCP_IMAGE: ${{ secrets.$GCP_IMAGE }}
+          GCP_REGION: ${{ secrets.$GCP_REGION }}
+          GCP_PROJECT: ${{ secrets.$GCP_PROJECT }}
+          GCP_SERVICE: ${{ secrets.$GCP_SERVICE }}
 
