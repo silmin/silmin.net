@@ -27,5 +27,11 @@ jobs:
         run: |
           bash scripts/build.sh
           bash scripts/deploy.sh
+        env:
+          GCP_SA_KEY: $GCP_SA_KEY
+          GCP_IMAGE: $GCP_IMAGE
+          GCP_REGION: $GCP_REGION
+          GCP_PROJECT: $GCP_PROJECT
+          GCP_SERVICE: $GCP_SERVICE
 
 
