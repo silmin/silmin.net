@@ -3,6 +3,7 @@
 deploy_cmd="gcloud run deploy $GCP_SERVICE \
     --image $GCP_IMAGE \
     --port $GCP_PORT \
+    --service-account ${GCP_SERVICE}@${GCP_PROJECT}.iam.gserviceaccount.com
     --region $GCP_REGION"
 
 gcloud config set project $GCP_PROJECT
