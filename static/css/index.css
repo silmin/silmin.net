@@ -9,7 +9,7 @@ body {
     background: var(--background-color);
     padding: 20px 40px;
     color: var(--foreground-color);
-    font-family: Jetbrains mono;
+    font-family: 'Jetbrains Mono', monospace;
 }
 
 h1 {
