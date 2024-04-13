@@ -17,5 +17,8 @@ func main() {
 	e.File("/", filepath.Join(htmlPath, "/index.html"))
 
 	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	e.Logger.Fatal(e.Start(":" + port))
 }
