@@ -8,7 +8,7 @@
 body {
     background: var(--background-color);
     padding: 20px 40px;
-    max-width: 120em;
+    max-width: 80em;
     color: var(--foreground-color);
     font-family: 'Jetbrains Mono', monospace;
 }
@@ -31,6 +31,7 @@ dd {
 
 p.box {
     border: solid var(--primary-color);
+    padding: 0.75em;
 }
 
 a {
