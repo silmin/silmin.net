@@ -1,6 +1,6 @@
 :root {
     --primary-color: #5E81AC;
-    --secondary-color: #81A1C1;
+    --secondary-color: #A3BE8C;
     --background-color: #2E3440;
     --foreground-color: #D8DEE9;
 }
@@ -8,16 +8,17 @@
 body {
     background: var(--background-color);
     padding: 20px 40px;
+    max-width: 120em;
     color: var(--foreground-color);
     font-family: 'Jetbrains Mono', monospace;
 }
 
 h1 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 h2 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 dd {
@@ -28,14 +29,18 @@ dd {
     margin-bottom: 10px;
 }
 
+p.box {
+    border: solid var(--primary-color);
+}
+
 a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 a:visited {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
