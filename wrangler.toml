@@ -1,0 +1,7 @@
+name = "silmin-net"
+compatibility_date = "2025-08-13"
+
+assets = { directory = "./dist" }
+
+[build]
+command = "bash scripts/build-cf.sh"
